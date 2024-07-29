@@ -1,4 +1,3 @@
-# mariadb/mariadb-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mariadb
-        image: gcr.io/wordpres123/mariadb:latest
+        image: gcr.io/alpha-1996/mariadb:latest
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: root_password
@@ -30,7 +29,6 @@ spec:
         - containerPort: 3306
 
 ---
-# mariadb/mariadb-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -42,3 +40,4 @@ spec:
     targetPort: 3306
   selector:
     app: mariadb
+  type: ClusterIP
