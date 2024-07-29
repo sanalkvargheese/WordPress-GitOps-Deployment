@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/San-s-Association/sanalkvargheese-WordPress-GitOps-Deployment.git'
+    repoURL: 'https://github.com/sanalkvargheese/WordPress-GitOps-Deployment.git'
     targetRevision: HEAD
     path: .
   destination:
