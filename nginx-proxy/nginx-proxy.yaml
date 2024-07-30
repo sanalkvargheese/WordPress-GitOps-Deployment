@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/alpha-1996/nginx-proxy.latest
+        image: gcr.io/alpha-1996/nginx-proxy:latest
         ports:
         - containerPort: 80
         volumeMounts:
