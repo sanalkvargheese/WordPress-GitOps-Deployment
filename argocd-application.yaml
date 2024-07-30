@@ -8,11 +8,13 @@ spec:
   source:
     repoURL: 'https://github.com/sanalkvargheese/WordPress-GitOps-Deployment.git'
     targetRevision: HEAD
-    path: .
+    path: mariadb  # Path to the directory containing manifests
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: mariadb2
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
